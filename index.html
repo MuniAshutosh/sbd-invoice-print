@@ -22,7 +22,7 @@
         }
 
         .menu {
-            position: sticky;
+            position: absolute;
             top: 0;
             left: 0;
             background-color: antiquewhite;
@@ -36,8 +36,14 @@
         main {
             width: 21cm;
             height: 29.7cm;
-            background-image: url(./5.jpg);
-            background-size: contain;
+            /* background-image: url(./5.jpg); */
+            /* background-size: contain; */
+        }
+
+        img {
+            object-fit: contain;
+            width: 21cm;
+            height: 29.7cm;
         }
 
         .ref {
@@ -153,6 +159,7 @@
         }
     </style>
     <main>
+        <img src="./5.jpg" alt="">
 
         <div class="menu">
 
@@ -320,7 +327,7 @@
 
         document.getElementById("theme").addEventListener("change", (event) => {
             theme = event.target.value
-            document.getElementsByTagName("main")[0].style.backgroundImage = `url('./${theme}.jpg')`
+            document.getElementsByTagName("img")[0].src = `./${theme}.jpg`
             if (theme == 2) {
                 console.log(2)
             } else if (theme == 5) {
