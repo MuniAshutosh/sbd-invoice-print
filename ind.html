@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        @media print {
+            .menu * {
+                display: none;
+                visibility: none;
+            }
+
+            input:placeholder-shown {
+                display: none;
+            }
+        }
+
+        .menu {
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: antiquewhite;
+            width: 90vw;
+            display: flex;
+            justify-content: space-between;
+            /* padding: 3pt; */
+            z-index: 1;
+        }
+
+        main {
+            width: 21cm;
+            height: 29.7cm;
+            background-image: url(./5.jpg);
+            background-size: contain;
+        }
+
+        .ref {
+            position: absolute;
+            top: 156pt;
+            left: 88pt;
+            font-size: 12pt;
+        }
+
+        .date {
+            position: absolute;
+            top: 156pt;
+            left: 496pt;
+            font-size: 12pt;
+        }
+
+        input {
+            border: none;
+        }
+
+        td input {
+            height: 98%;
+            width: 98%;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+
+            position: absolute;
+            top: 194pt;
+            left: 37pt;
+            height: 492pt;
+            width: 527pt;
+        }
+
+        thead {
+            text-align: center;
+        }
+
+        tr td {
+            border-bottom: 1pt solid black;
+            border-right: 1pt solid black;
+        }
+
+
+        * {
+            font-size: 12pt;
+            --first-column-width: 1pt;
+            --second-column-width: 12pt;
+            --third-column-width: 2pt;
+            --fourth-column-width: 7pt;
+            --theme: "5.jpg";
+        }
+
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        tbody tr td:nth-child(1) {
+            text-align: center;
+            width: var(--first-column-width);
+            max-width: var(--first-column-width);
+        }
+
+        tbody tr td:nth-child(2) {
+            width: var(--second-column-width);
+            max-width: var(--second-column-width);
+        }
+
+        tbody tr td:nth-child(3) {
+            text-align: end;
+            width: var(--third-column-width);
+            max-width: var(--third-column-width);
+        }
+
+        tbody tr td:nth-child(4) {
+            text-align: end;
+            width: var(--fourth-column-width);
+            max-width: var(--fourth-column-width);
+        }
+
+
+        tfoot tr td:nth-child(1) {
+            text-align: center;
+            width: var(--first-column-width);
+            max-width: var(--first-column-width);
+        }
+
+        tfoot tr td:nth-child(2) {
+            width: var(--second-column-width);
+            max-width: var(--second-column-width);
+        }
+
+        tfoot tr td:nth-child(3) {
+            text-align: end;
+            width: var(--third-column-width);
+            max-width: var(--third-column-width);
+        }
+
+        tfoot tr td:nth-child(4) {
+            text-align: end;
+            width: var(--fourth-column-width);
+            max-width: var(--fourth-column-width);
+        }
+    </style>
+    <main>
+
+        <div class="menu">
+
+            <select name="" id="theme">
+                <option value="5">Shri Baidyanath</option>
+                <option value="2">Sankar Aluminium</option>
+            </select>
+
+            <button onclick="location.reload()">Clear All</button>
+            <button onclick="window.print()">Print</button>
+        </div>
+
+
+        <input type="text" class="ref" placeholder="Enter ref number">
+
+        <input type="text" type="date" class="date" placeholder="Enter date dd/mm/yyyy">
+
+
+        <table>
+            <thead>
+                <tr>
+                    <td>Sl no.</td>
+                    <td>Description</td>
+                    <td>Quantity</td>
+                    <td>Amount</td>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+                <tr>
+                    <td contenteditable></td>
+                    <td contenteditable>
+                        <div contenteditable></div>
+                    </td>
+                    <td contenteditable></td>
+                    <td contenteditable></td>
+                </tr>
+
+
+
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td style="border-right: none;"></td>
+                    <td style="font-weight: bold; text-align: center;">TOTAL</td>
+                    <td id="totalAmount">0</td>
+                    <td id="totalSum">0.00</td>
+                </tr>
+
+            </tfoot>
+        </table>
+
+    </main>
+
+    <script>
+
+        document.getElementById("theme").addEventListener("change", (event) => {
+            theme = event.target.value
+            document.getElementsByTagName("main")[0].style.backgroundImage = `url('./${theme}.jpg')`
+            if (theme == 2) {
+                console.log(2)
+            } else if (theme == 5) {
+                console.log(5)
+
+            }
+        })
+
+
+        document.querySelectorAll("table tbody tr td:nth-child(4)").forEach(el => {
+            el.addEventListener('blur', (event) => {
+                event.target.innerText = (isNaN(parseFloat(event.target.innerText))) ? "" : parseFloat(event.target.innerText).toFixed(2)
+                let amountColumnValues = Array.from(document.querySelectorAll("table tbody tr td:nth-child(4)"))
+                totalSum = amountColumnValues.map(_ => parseFloat(_.innerHTML)).filter(t => !isNaN(t)).reduce((i, _) => { return i + _ }, 0)
+                console.log(totalSum);
+                document.getElementById("totalSum").innerText = parseFloat(totalSum).toFixed(2)
+            })
+        })
+
+
+        document.querySelectorAll("table tbody tr td:nth-child(3)").forEach(el => {
+            el.addEventListener('blur', (event) => {
+                event.target.innerText = (isNaN(parseFloat(event.target.innerText))) ? "" : parseFloat(event.target.innerText)
+                let quantityColumnValues = Array.from(document.querySelectorAll("table tbody tr td:nth-child(3)"))
+                totalSum = quantityColumnValues.map(_ => parseInt(_.innerHTML)).filter(t => !isNaN(t)).reduce((i, _) => { return i + _ }, 0)
+                document.getElementById("totalAmount").innerText = parseInt(totalSum)
+            })
+        })
+
+
+
+    </script>
+</body>
+
+</html>
