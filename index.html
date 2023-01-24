@@ -159,7 +159,7 @@
         }
     </style>
     <main>
-        <img src="./5.jpg" alt="">
+        <img src="./5.jpg">
 
         <div class="menu">
 
@@ -328,12 +328,14 @@
         document.getElementById("theme").addEventListener("change", (event) => {
             theme = event.target.value
             document.getElementsByTagName("img")[0].src = `./${theme}.jpg`
-            if (theme == 2) {
-                console.log(2)
-            } else if (theme == 5) {
-                console.log(5)
-
-            }
+            setTimeout(() => {
+                if (theme == 2) {
+                    document.querySelectorAll(".ref, .date").forEach(el => el.style.top = "123pt")
+                } else if (theme == 5) {
+                    document.querySelectorAll(".ref, .date").forEach(el => el.style.top = "156pt")
+                    console.log(5)
+                }
+            }, 100)
         })
 
 
