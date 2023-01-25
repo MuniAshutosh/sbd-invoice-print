@@ -2,14 +2,34 @@
 <html lang="en">
 
 <head>
+    <!-- <script>
+        window.onload = () => {
+            console.log("ONLOAD");
+            let pass = prompt("Enter password");
+            if (pass == "majamajlis") {
+                console.log("correct");
+                document.body.style.display = ""
+            } else {
+                console.log("wrong");
+                document.body.style.display = "none"
+            }
+        }
+    </script> -->
+
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 
 <body>
     <style>
+        body {
+            /* display: none; */
+        }
+
         @media print {
             .menu * {
                 display: none;
@@ -327,6 +347,8 @@
 
     <script>
 
+
+
         document.querySelector("input.date").value = new Date().toLocaleDateString("in")
 
         document.getElementById("theme").addEventListener("change", (event) => {
@@ -349,7 +371,7 @@
                 let amountColumnValues = Array.from(document.querySelectorAll("table tbody tr td:nth-child(4)"))
                 totalSum = amountColumnValues.map(_ => parseFloat(_.innerHTML)).filter(t => !isNaN(t)).reduce((i, _) => { return i + _ }, 0)
                 console.log(totalSum);
-                document.getElementById("totalSum").innerText = parseFloat(totalSum).toFixed(2)
+                document.getElementById("totalSum").innerText = parseFloat(totalSum).toLocaleString("en-US", { style: "currency", currency: "INR" })
             })
         })
 

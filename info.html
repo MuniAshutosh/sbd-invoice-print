@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    mm - inch
+    <table>
+        <tr>
+            <td>mm</td>
+            <td>inch</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="mm" onkeyup="convertToInch()"> </td>
+            <td><input type="number" id="inch" onkeyup="convertToMM()"> </td>
+        </tr>
+    </table>
+
+
+
+    <table>
+
+        <thead>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+
+    </table>
+
+    <script>
+
+        function $(query) {
+            return Array.from(document.querySelectorAll(query))
+        }
+
+        function convertToInch() {
+
+            mm = parseFloat(document.getElementById("mm").value)
+            document.getElementById("inch").value = mm / 25.4;
+
+        }
+
+        function convertToMM() {
+            inch = parseFloat(document.getElementById("inch").value)
+            document.getElementById("mm").value = inch * 25.4;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
