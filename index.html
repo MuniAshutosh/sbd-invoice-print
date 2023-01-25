@@ -325,6 +325,8 @@
 
     <script>
 
+        document.querySelector("input.date").value = new Date().toLocaleDateString()
+
         document.getElementById("theme").addEventListener("change", (event) => {
             theme = event.target.value
             document.getElementsByTagName("img")[0].src = `./${theme}.jpg`
@@ -357,6 +359,11 @@
                 totalSum = quantityColumnValues.map(_ => parseInt(_.innerHTML)).filter(t => !isNaN(t)).reduce((i, _) => { return i + _ }, 0)
                 document.getElementById("totalAmount").innerText = parseInt(totalSum)
             })
+        })
+
+        window.addEventListener('beforeprint', () => {
+            document.title = `Invoice ${document.querySelector("input.ref").value} on ${document.querySelector("input.date").value}`
+            console.log(document.title);
         })
 
 
