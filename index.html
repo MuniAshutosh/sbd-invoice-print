@@ -166,6 +166,8 @@
             <select name="" id="theme">
                 <option value="5">Shri Baidyanath</option>
                 <option value="2">Sankar Aluminium</option>
+                <option value="4">S.S. Aluminium</option>
+                <option value="1">Subham Aluminium</option>
             </select>
 
             <button onclick="location.reload()">Clear All</button>
@@ -331,7 +333,7 @@
             theme = event.target.value
             document.getElementsByTagName("img")[0].src = `./${theme}.jpg`
             setTimeout(() => {
-                if (theme == 2) {
+                if (theme == 2 || theme == 1 || theme == 4) {
                     document.querySelectorAll(".ref, .date").forEach(el => el.style.top = "123pt")
                 } else if (theme == 5) {
                     document.querySelectorAll(".ref, .date").forEach(el => el.style.top = "156pt")
